@@ -1,0 +1,89 @@
+.flex-container{
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: wrap column;
+     justify-content:center;
+    align-items: center;
+}
+
+#sign{
+    width: 50%;
+    height:50%;
+    border:2px solid black;
+}
+
+form > * {
+    margin: 2%;
+}
+
+.inner-head{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    
+}
+
+
+.heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}  
+
+.tac{
+    font-size: 0.8rem;
+}
+
+p{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: darkred;
+}
+
+.formdiv{
+    width: 60%;
+}
+
+input[type=text],input[type=password]{
+    width: 50%;
+}
+
+.genderdiv{
+    width: 36%;
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+}
+.linkdiv{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+table{
+    width: 50%;
+}
+@media screen and (min-width:480px) {
+    body{
+        background-color:skyblue;
+    }
+    
+}
+
+@media screen and (min-width:1024px) {
+    p{
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: darkred;
+    } 
+
+ 
+    
+}
+
+input{
+  border-radius: 0.2rem;
+}
