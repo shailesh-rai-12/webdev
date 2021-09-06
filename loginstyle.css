@@ -1,0 +1,36 @@
+.headdiv{
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.formdiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+form{
+    margin-left: 30%;
+    
+
+}
+.emptydiv{
+    width:32%;
+    height:100px;
+    display: inline-block;
+    background-color: blue;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width:800px) {
+    body{
+        background-color: green;
+     } 
+}
+@media screen and (max-width:480px) {
+ body{
+    background-color: red;
+ } 
+}
