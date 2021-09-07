@@ -11,8 +11,7 @@
 }
 
 form{
-    margin-left: 30%;
-    
+    margin-left: 30%; 
 
 }
 .emptydiv{
@@ -24,13 +23,95 @@ form{
     margin-top: 5px;
 }
 
-@media screen and (max-width:800px) {
+/* for desktop screen */
+@media screen and (max-width:1280px) {
     body{
         background-color: green;
      } 
+     .emptydiv{
+        width:32%;
+        height:100px;
+        display: block;
+        background-color: blue;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top:5px;
+    }
+    button{
+        display: block;
+        margin-left: 36%;
+        margin-right: auto;
+    }
+    form{
+        margin-left: 20%;
+        
+    
+    }
 }
-@media screen and (max-width:480px) {
+
+/* for tablet screen */
+@media screen and (max-width:968px) {
  body{
     background-color: red;
  } 
+ .emptydiv{
+    width:32%;
+    height:100px;
+    display: block;
+    background-color: blue;
+    margin-left:40%;
+    margin-right: auto;
+    margin-top:5px;
 }
+
+form > *{
+    display: block;
+    /* margin-left: 20%; */
+    margin-left: auto;
+    margin-right: auto;
+    
+
+}
+button{
+    display: block;
+    margin-left: 36%;
+    margin-right: auto;
+} 
+}
+
+/* for mobile screen */
+@media screen and (max-width:480px) {
+    body{
+       background-color: rgb(186, 241, 35);
+    } 
+
+    .formdiv{
+        width: 100%;
+    }
+    .emptydiv{
+       width:32%;
+       height:100px;
+       display: block;
+       background-color: blue;
+       margin-left:auto;
+       margin-right: auto;
+       margin-top:5px;
+   }
+   
+   form{
+       margin: 0px;
+   }
+   form > *{
+       display: block;
+       /* margin-left: 20%; */
+       margin-left:auto;
+       margin-right: auto;
+       
+   
+   }
+   button{
+       display: block;
+       margin-left:auto;
+       margin-right: auto;
+   } 
+   }
