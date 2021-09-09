@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-2</title>
+    <link rel="stylesheet" href="assignment-2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-container">
+            <div class="nav-btn-container">
+                <div id='nav-btn'></div>
+
+            </div>
+            <a href="##">Home</a>
+            <a href="##">Create</a>
+            <a href="##">About</a>
+
+        </div>
+        <div class='nav-btn-open'></div>
+        <div class="content-container">
+            <form action="" method="get">
+                <div class="fixed-content">
+                    <input class="fixed" id='reptxt' type="text" list="options">
+                    <datalist id='options'>
+                        <option value="bug">
+                        <option value="frontend">
+                        <option value="backend">
+                        <option value="infra">
+                    </datalist>
+                    <button id='report' type="button">Report</button>
+                </div>
+                <div id='vc' class="variable-content">
+                    <div class='content'></div>
+                    <div class="edit-btns">
+                        <button type="button" id='at'>AddText</button>
+                        <button type="button" id="ac">AddComment</button>
+                        <button type="button" id="del">Delete</button>               
+                    </div>
+                    <button type="button">Submit</button>
+
+                </div>
+            </form>
+                
+        </div>
+
+    </div>
+    <div class="message"></div>
+    <script src="assignment-2.js"></script>
+</body>
+</html>

@@ -138,11 +138,56 @@ function delInput()
 con=document.querySelector('.container')
 con.style.setProperty('margin',0)
 div=document.createElement('div')
-setStyles(div,{'position':'absolute','width':'20%','height':'100%','background-color':'green','z-index':'1','display':'flex','flex-direction':'column'})
+div.classList.toggle('slidediv',true)
+setStyles(div,{'position':'absolute','width':'20%','height':'100%','background-color':'green','z-index':'1','display':'flex','flex-direction':'column','transition':'width 2s'})
 con.append(div)
+
+// setTimeout(()=>{
+//     let sd=document.querySelector('.slidediv')
+//     console.log(sd);
+//     setStyles(sd,{'width':'0%'})
+  
+//     console.log("done");
+//     console.log(sd);
+// },3000);
 div=document.createElement('div')
-setStyles(div,{'position':'absolute','width':'2%','height':'2%','background-color':'black','margin-top':'0px','z-index':'2'})
+div.classList.toggle('slidebtn',true)
+setStyles(div,{'position':'absolute','width':'2%','height':'4%','background-color':'black','top':'3%','z-index':'2','left':'18.5%','transition':'left 2s'})
 con.append(div)
+div.addEventListener('click',slide)
+
+localStorage.setItem('slideFlag','open')
+
+function slide()
+{
+    //closing window
+    let sw=document.querySelector('.slidediv')
+    let sb=document.querySelector('.slidebtn')
+    if(localStorage.getItem('slideFlag')=='open'){
+        
+        setStyles(sw,{'width':'0%'})
+        setStyles(sb,{'left':'0.9%'})
+        localStorage.setItem('slideFlag','close')
+    }else{
+        setStyles(sw,{'width':'20%'})
+        setStyles(sb,{'left':'18.5%'})
+        localStorage.setItem('slideFlag','open')
+    }
+   
+
+}
+
+//adding menu
+div=document.querySelector('.slidediv')
+const menu=['About','Home','Create']
+menu.forEach(ele => {
+    let a=document.createElement('a')
+    a.innerHTML=ele
+    setStyles(a,{'margin-top':'2%'})
+    div.append(a)
+});
+
+
 
 
 
