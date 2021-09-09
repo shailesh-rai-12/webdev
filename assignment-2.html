@@ -21,8 +21,10 @@
         </div>
         <div class='nav-btn-open'></div>
         <div class="content-container">
+            <center><h1>Report</h1></center>
             <form action="" method="get">
                 <div class="fixed-content">
+                    
                     <input class="fixed" id='reptxt' type="text" list="options">
                     <datalist id='options'>
                         <option value="bug">
@@ -39,7 +41,7 @@
                         <button type="button" id="ac">AddComment</button>
                         <button type="button" id="del">Delete</button>               
                     </div>
-                    <button type="button">Submit</button>
+                    <button id='submit' type="button">Submit</button>
 
                 </div>
             </form>
@@ -47,7 +49,11 @@
         </div>
 
     </div>
-    <div class="message"></div>
+    <div class="message">
+        <div class="successMsg"></div>
+        <div class="msg-count"></div>
+        <button>OK</button>
+    </div>
     <script src="assignment-2.js"></script>
 </body>
 </html>

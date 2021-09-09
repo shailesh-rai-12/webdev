@@ -69,11 +69,9 @@ a{
     visibility:hidden;
 }
 
-/* form properties */
-form{
-    border: 1px solid black;
+h1{
+    text-decoration: underline;
 }
-
 
 .variable-content{
     display: flex;
@@ -102,10 +100,16 @@ button:last-child{
 
 .message{
     position: absolute;
-    width: 25%;
-    height: 28%;
-    background-color: deeppink;
+    width:auto;
+    height:auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: rgb(231, 123, 181);
     z-index: 4;
     left:36%;
     top:36%;
+    padding: 5%;
+    visibility: hidden;
+    align-items: center;
 }

@@ -31,6 +31,12 @@ but.addEventListener('click',toggleSlide)
 but=document.querySelector('.nav-btn-open')
 but.addEventListener('click',toggleSlide)
 
+but=document.querySelector('#submit')
+but.addEventListener('click',summary)
+
+but=document.querySelector('.message button')
+but.addEventListener('click',closePop)
+
 function addTextItem() {
     let ele=document.createElement('input')
     ele.type='text'
@@ -67,6 +73,8 @@ function validateInput() {
         document.querySelector('#report').disabled='disabled'
 
 
+    }else{
+        alert('Please choose from Given inputs')
     }
     console.log(input);
     
@@ -97,6 +105,47 @@ function toggleSlide()
     }
     
 
+}
+
+function summary() {
+    let points=document.querySelectorAll('.content input').length
+    let comments=document.querySelectorAll('.content textarea').length
+
+    if(!points==0 || !comments==0){
+        let inps=document.querySelectorAll('.content > *')
+        let flag=true
+        inps.forEach(element => {
+            if(element.value=='')
+            {
+                flag=false
+            }
+        });
+
+        if(flag)
+        {
+            let topic=document.querySelector('#reptxt').value
+        let msg='Your '+topic+' Report Sucessfully Submitted!'
+    
+         document.querySelector('.message').style.visibility='visible'
+        //messele.innerHTML='<div>'+msg+'</div>'+'<div><ul><li>Points-'+points+'</li><li>Comments-'+comments+'</li></ul></div>'
+         // console.log(points);
+        document.querySelector('.successMsg').innerHTML='<span>'+msg+'</span>';
+         document.querySelector('.msg-count').innerHTML='<ul><li>Points-'+points+'</li><li>Comments-'+comments+'</li></ul>'
+
+        }else{
+            alert('fill the text fields')
+        }
+        
+        
+    }else{
+        alert('Atleast add one element')
+    }
+    
+    
+}
+
+function closePop() {
+    location.reload()
 }
 
 
