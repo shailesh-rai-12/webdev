@@ -8,10 +8,27 @@ var setStyles = function(elem,styles){
     }
 }
 
+//media queries
+var breadth='20%';
+let mq=window.matchMedia('(max-width:992px)')
+if (mq.matches) {
+    breadth='36%'
+}
+
+mq=window.matchMedia('(max-width:768px)')
+if (mq.matches) {
+    breadth='50%'
+}
+//mqT.addEventListener('change',breadthAdjust)
+
+mq=window.matchMedia('(max-width:480px)')
+if (mq.matches) {
+    breadth='100%'
+}
+
+
 document.getElementById('vc').style.visibility="hidden";
-// c.style.visibilty="hidden"
-// console.log(c);
-//setStyles(c,{'visibilty':'hidden'})
+
 var contentBox=document.querySelector('.content')
 var but=document.querySelector('#at')
 but.addEventListener('click',addTextItem)
@@ -96,7 +113,8 @@ function toggleSlide()
         
         localStorage.setItem('slide','close')
     }else{
-        setStyles(nc,{'width':'20%'})
+       // console.log(breadth)
+        setStyles(nc,{'width':breadth})
         at.forEach(element => {
             setStyles(element,{'visibility':'visible'});
         });
@@ -147,6 +165,8 @@ function summary() {
 function closePop() {
     location.reload()
 }
+
+
 
 
 
