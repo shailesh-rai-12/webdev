@@ -83,9 +83,9 @@ function validateInput() {
     let input=document.getElementById('reptxt').value
     const op=['bug','frontend','backend','infra']
     if(op.includes(input)){
-        //console.log('working');
+     
         document.querySelector('.variable-content').style.visibility='visible'
-        //setStyles(content,{'visibility':'visible'})
+       
         document.querySelector('#reptxt').disabled='disabled'
         document.querySelector('#report').disabled='disabled'
 
@@ -145,8 +145,7 @@ function summary() {
         let msg='Your '+topic+' Report Sucessfully Submitted!'
     
          document.querySelector('.message').style.visibility='visible'
-        //messele.innerHTML='<div>'+msg+'</div>'+'<div><ul><li>Points-'+points+'</li><li>Comments-'+comments+'</li></ul></div>'
-         // console.log(points);
+
         document.querySelector('.successMsg').innerHTML='<span>'+msg+'</span>';
          document.querySelector('.msg-count').innerHTML='<ul><li>Points-'+points+'</li><li>Comments-'+comments+'</li></ul>'
 
