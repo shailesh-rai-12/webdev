@@ -4,7 +4,7 @@ function Counter(){
     //closure
     function clicked()
     {
-        //console.log(count);
+    
         return count++;
     }
 
@@ -21,7 +21,6 @@ var x_array=[],
 
 //when a tile is clicked
 function tileClicked() {
-    console.log(document.getElementById('cpu').checked,counterValue);
 
     //if already clicked
     if(!this.hasChildNodes() )
@@ -46,6 +45,7 @@ function tileClicked() {
                 if(isWinner(counterValue))
                 {
                     alert('Player-1 is winner!');
+                    updateScore(false);
                     reset();
                     return;
                 }
@@ -63,6 +63,7 @@ function tileClicked() {
                         if(isWinner(counterValue))
                         {
                             alert('CPU is winner!');
+                            updateScore(true);
                             reset();
                             return;
                         }
@@ -85,6 +86,7 @@ function tileClicked() {
                     if(isWinner(counterValue))
                     {
                         alert('Player-2 is winner!');
+                        updateScore(false);
                         reset();
                         return;
                     }
@@ -196,17 +198,16 @@ function cpuDecision() {
         });
 
         
-       //console.log('filtered',filter1);
+      
        let subA=subarrays();
        let filter2=-1;
        filter1.forEach((index)=>{
-            //console.log('index',index);
+           
             subA.forEach((subset)=>{
                if(win_array[index].includes(subset[0]) && win_array[index].includes(subset[1]))
                {
                         filter2=index;
-                       //console.log('Array win',index);
-                    // console.log(win_array[index]);
+                       
                }
             });
        });
@@ -251,10 +252,34 @@ function subarrays()
         }
         subsets.push(arr);
 
-       // console.log(arr);
     }
-    //console.log(subsets);
     return subsets;
+}
+
+//updating scores
+function updateScore(flag)
+{
+    let score,scoreDiv;
+    if(counterValue % 2==1 && !flag){
+        scoreDiv=document.querySelector('.x-score');
+
+    }
+    else
+    {
+        scoreDiv=document.querySelector('.o-score');     
+    }
+
+    score=parseInt(scoreDiv.innerText);
+    score=score+1;
+    scoreDiv.innerText=score;
+}
+
+//resetting scoreboard
+function resetScore()
+{
+    document.querySelector('.x-score').innerText=0;
+    document.querySelector('.o-score').innerText=0;
+
 }
 
 //adding event listeners to tiles
@@ -265,3 +290,6 @@ document.querySelectorAll('.tile').forEach((element)=>{
 //adding event to reset button
 var resetButton=document.getElementById('reset');
 resetButton.addEventListener('click',reset);
+
+var scoreboardReset=document.getElementById('resetScore');
+scoreboardReset.addEventListener('click',resetScore);

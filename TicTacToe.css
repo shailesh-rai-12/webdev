@@ -8,8 +8,16 @@ body{
 .container{
  flex: 1;
  display: flex;
- flex-direction: column;
+ flex-direction:row;
 }
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+
 
 .board-container{
     display: flex;
@@ -23,7 +31,7 @@ body{
 .row{
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
+   
 }
 
 .result-container{
@@ -47,5 +55,92 @@ body{
     flex-direction: column;
     align-items: center;
     
+}
+
+#comment{
+    font-size: 20px;
+    background-color: yellow;
+    font-weight: 800;
+}
+
+.scoreboard-container{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+}
+
+.scoreboard-head{
+ display: flex;
+ flex-direction:row;
+ background-color:aqua ;
+ justify-content: center;
+ font-size:44px;
+ margin: 4px;
+}
+
+.score-container{
+display: flex;
+flex-direction:column;
+margin: 4px;
 
 }
+
+.score-type{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    font-size:34px;
+    text-decoration: underline;
+    
+}
+
+.scores{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 4px;
+    
+}
+
+.x-score-head{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size:18px;
+    font-weight: 700;
+}
+
+.x-score{
+    flex:2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.o-score-head{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size:18px;
+    font-weight:700;
+}
+
+.o-score{
+    flex:2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.score-reset-container{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    margin: 4px;
+
+}
+
