@@ -1,0 +1,51 @@
+body{
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ margin: 0;
+}
+
+.container{
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+}
+
+.board-container{
+    display: flex;
+    flex:3;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.result-container{
+    display: flex;
+    flex:1;
+}
+
+.tile{
+    width: 80px;
+    height:80px;
+    margin: 2px;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
