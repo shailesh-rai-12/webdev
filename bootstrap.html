@@ -7,6 +7,7 @@
     <title>Bootstrap</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="h-100 container-fluid">
     <!-- container -->
@@ -28,7 +29,7 @@
                     
                         <div class="row h-100 m-0">
                                 <!-- form container -->
-                                <div class=" col-12 col-sm-8 ml-auto mr-auto">
+                                <div class="h-75 col-12 col-sm-8 ml-auto mr-auto  alert alert-info">
                                     <!-- 4.5 -->
                                     
                                     <form class="form" action="##" method="post">
@@ -37,7 +38,7 @@
                                             <div class="input-group-prepend">
                                             <span class="input-group-text">Name</span>
                                             </div>
-                                            <input type="text" aria-label="Name" class="form-control">
+                                            <input type="text" name="name" aria-label="Name" class="form-control alert">
                                         </div>
                                     
                                         
@@ -46,9 +47,17 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Email</span>
                                             </div>
-                                            <input class="form-control" type="text" aria-label="Email"  id="email">
+                                            <input class="form-control alert" type="text" name="email" aria-label="Email"  id="email">
                                         </div>
 
+                                        
+
+                                        <div class="input-group m-1 mt-md-3">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">Time</span>
+                                            </div>
+                                            <input class="form-control alert" type="datetime-local" name="time" id="datetime">
+                                        </div>
                                         <div class="input-group m-1 mt-md-3">
                                             <div class="input-group-append">
                                                 <span class="input-group-text">Report</span>
@@ -64,27 +73,20 @@
 
                                         <div class="input-group m-1 mt-md-3">
                                             <div class="input-group-append">
-                                                <span class="input-group-text">Time</span>
-                                            </div>
-                                            <input class="form-control" type="datetime-local"  id="datetime">
-                                        </div>
-
-                                        <div class="input-group m-1 mt-md-3">
-                                            <div class="input-group-append">
                                                 <span class="input-group-text">Comment</span>
                                             </div>
                                             <textarea class="form-control" id="comment"></textarea>
                                         </div>
                     
                                         <div class="input-group m-1 mt-md-3">
-                                            <input class="form-control btn-success btn-sm" type="button" id="submit" value="submit">
+                                            <button class="form-control btn-success btn-sm" type="button" id="submit">Submit</button>
                                         </div>
                     
                                     </form>
                                 </div>
 
-                                <div class="col-sm-12 mb-4 d-flex justify-content-center alert alert-danger">
-                                    <span>* fill all the fields</span> 
+                                <div id="message-box" class="col-sm-12 mb-4 d-none justify-content-center alert alert-danger">
+                                    <span class="fa fa-asterisk" id="message">fill all fields</span> 
                                 </div>
                                 
                         </div>
@@ -93,10 +95,14 @@
 
                     </div>
                     <!-- content right -->
-                    <div class="col-sm-12 col-md-6 pt-1 alert alert-success">
+                    <div id="info-box" class="col-sm-12 col-md-6 pt-1 alert alert-success">
                        
-                        <div class="col-sm-12 bg-success mt-1 p-1 rounded">
-                            <div class="d-flex flex-row justify-content-between"><span>frontend</span><span>Time</span></div>
+                        <div id="id" class="col-sm-12 bg-success mt-1 p-1 rounded">
+                            <div class="d-flex flex-row justify-content-between">
+                                <span>frontend</span>
+                                <span>Time</span>
+                                <i id="c_id" class="fa fa-times" aria-hidden="true"></i>
+                            </div>
                             <div class="bg-white">
                                 <p class="m-sm-0">Name</p>
                                 <p class="m-sm-0">Email</p>
@@ -105,20 +111,18 @@
                         </div>
 
                             <div class="col-sm-12 bg-success mt-1 p-1 rounded">
-                                <div class="d-flex flex-row justify-content-between"><span>frontend</span><span>Time</span></div>
+                                <div class="d-flex flex-row justify-content-between"><span>frontend</span><span>Time</span><i class="fa fa-times" aria-hidden="true"></i></div>
                                 <div class="bg-white">
                                     <p class="m-sm-0">Name</p>
                                     <p class="m-sm-0">Email</p>
                                     <p class="m-sm-0">Comment</p>  
                                 </div>
-                            </div>
-                          
-                       
-                       
+                            </div>  
                     </div>
                 
             </div> 
         </div>
     </div>
+    <script src="bootstrap_ext.js"></script>
 </body>
 </html>
