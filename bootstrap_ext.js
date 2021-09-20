@@ -98,12 +98,31 @@ function validation() {
 function createInfoBox(id)
 {
     //unique ids
-    let cid='d'+id;
+    let cid='d'+id,
+    color='bg-success';
+
+    switch(data.dept)
+    {
+        case "Backend":
+                        color='bg-primary';
+            break;
+        case "Infra":
+                        color='bg-warning';
+            break;
+        case "Testing":
+                        color='bg-danger';
+            break;
+
+        case "Support":
+                        color='bg-secondary';
+                break;
+
+    }
 
     //division box
 
    /*
-   
+   return data
    <div id="id" class="col-sm-12 bg-success mt-1 p-1 rounded">
         <div class="d-flex flex-row justify-content-between">
             <span>frontend</span>
@@ -119,14 +138,16 @@ function createInfoBox(id)
     
     */
 
-    return '<div id="'+cid+'" class="col-sm-12 bg-success mt-1 p-1 rounded">                            <div class="d-flex flex-row justify-content-between">                                <span>'+data.dept+'</span>                                <span>'+data.time+'</span>                                <i id="'+id+'" class="fa fa-times" aria-hidden="true"></i>                            </div>                            <div class="bg-white d-none">                                <p class="m-sm-0">'+data.name+'</p>                                <p class="m-sm-0">'+data.email+'</p>                                <p class="m-sm-0">'+data.comment+'</p>                              </div>                        </div>';
+    return '<div id="'+cid+'" class="col-sm-12 '+color+' mt-1 p-1 rounded">                            <div class="d-flex flex-row justify-content-between">                                <span>'+data.dept+'</span>                                <span>'+data.time+'</span>                                <i id="'+id+'" class="fa fa-times" aria-hidden="true"></i>                            </div>                            <div class="bg-white d-none">                                <p class="m-sm-0">'+data.name+'</p>                                <p class="m-sm-0">'+data.email+'</p>                                <p class="m-sm-0">'+data.comment+'</p>                              </div>                        </div>';
 
 }
 
 //hiding-showing of data
 function toggleDivision()
 {
-     console.log(this);
+    let div=this.lastChild.previousElementSibling;
+    div.classList.toggle('d-none')
+    div.classList.toggle('d-block')
 } 
 
 
@@ -137,6 +158,25 @@ function closeDivision(event)
     //handling event bubbling
     event.stopPropagation();
     this.parentElement.parentElement.remove();
+}
+
+
+//clearing form
+function clearForm()
+{
+    //first three inputs
+    var x=document.querySelectorAll('input.form-control');
+    x.forEach((e)=>{
+        e.value='';
+    });
+
+    //select value
+    x=document.querySelector('select.custom-select');
+    x.selectedIndex=0;
+
+    //commnet box
+    x=document.getElementById('comment');
+    x.value='';
 }
 
 //storing data
@@ -156,7 +196,9 @@ function storeData() {
             //will cause event bubbling
             let close=document.getElementById(id);
             close.addEventListener('click',closeDivision);
-            
+
+            //clearing form
+            clearForm();
 
 
     }
