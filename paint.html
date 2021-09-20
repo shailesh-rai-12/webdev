@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paint</title>
+    <link type="text/css" rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+</head>
+<body class="fluid-container h-100">
+    <!-- container -->
+    <div class="row h-100 px-2 pb-4">
+        <!-- head -->
+        <div class="col-12 h-auto bg-warning">MSB Paint</div>
+
+        <!-- content -->
+        <div class="col-12 bg-white h-100">
+
+            <div class="row h-100">
+                <div class="col-12 h-25">
+                    <div class="row h-100">
+                        <div class="col-sm-8 col-12 bg-white">
+                            <!-- color palatte -->
+                            <div class="d-flex flex-row justify-content-around align-items-center h-100">
+                                <div class="w-25 h-50 bg-success m-1 text-center">Green</div>
+                                <div class="w-25 h-50 bg-danger m-1 text-center">Red</div>
+                                <div class="w-25 h-50 bg-primary m-1 text-center">Blue</div>
+                                <div class="w-25 h-50 bg-warning m-1 text-center">Yellow</div>
+                                <div class="w-25 h-50 bg-dark text-white m-1 text-center">Black</div>
+                            </div>
+                        </div>
+                        <!-- clear button -->
+                        <div class="col-sm-4 col-12">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <button>clear</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- canvas -->
+                <div class="col-12 h-75 d-flex flex-column"> 
+                    <canvas class="h-100 border border-dark border-1 rounded"></canvas>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</body>
+</html>
