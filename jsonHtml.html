@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="h-100 container-fluid m-0">
+        <!-- container   -->
+        <div class="row  h-100">
+                <!-- music container -->
+                <div class="col-12 col-sm-6">
+                    <div class="d-flex flex-row justify-content-center text-decoration-underline"><h1>Song.com</h1></div>
+                    <div class="d-flex flex-column justify-content-center align-content-center h-100">
+                        <table class="table  table-dark h-50">
+                            <tr>
+                                <th scope="row">Song</th>
+                                <td id="song-name"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Artist</th>
+                                <td id="song-artist"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Duration</th>
+                                <td id="song-duration"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Year</th>
+                                <td id="song-year"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+
+                <!-- music list -->
+                <div id="song-list" class="col-12 col-sm-6 bg-dark">
+                    
+                </div>
+
+        </div>
+        <script type="text/javascript" src="jsonScript.js"></script>
+        
+</body>
+</html>
