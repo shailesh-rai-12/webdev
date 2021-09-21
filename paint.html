@@ -22,17 +22,18 @@
                         <div class="col-sm-8 col-12 bg-white">
                             <!-- color palatte -->
                             <div class="d-flex flex-row justify-content-around align-items-center h-100">
-                                <div class="w-25 h-50 bg-success m-1 text-center">Green</div>
-                                <div class="w-25 h-50 bg-danger m-1 text-center">Red</div>
-                                <div class="w-25 h-50 bg-primary m-1 text-center">Blue</div>
-                                <div class="w-25 h-50 bg-warning m-1 text-center">Yellow</div>
-                                <div class="w-25 h-50 bg-dark text-white m-1 text-center">Black</div>
+                                <div class="w-25 h-50 bg-success m-1 text-center" onclick="changeColor(this)">Green</div>
+                                <div class="w-25 h-50 bg-danger m-1 text-center" onclick="changeColor(this)">Red</div>
+                                <div class="w-25 h-50 bg-primary m-1 text-center" onclick="changeColor(this)">Blue</div>
+                                <div class="w-25 h-50 bg-warning m-1 text-center" onclick="changeColor(this)">Yellow</div>
+                                <div class="w-25 h-50 bg-dark text-white m-1 text-center" onclick="changeColor(this)">Black</div>
+                                <div class="w-25 h-50 bg-white m-1 text-center border border-dark" onclick="changeColor(this)">Eraser</div>
                             </div>
                         </div>
                         <!-- clear button -->
                         <div class="col-sm-4 col-12">
                             <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                                <button>clear</button>
+                                <button id="clear">clear</button>
                             </div>
                             
                         </div>
@@ -41,12 +42,14 @@
 
                 <!-- canvas -->
                 <div class="col-12 h-75 d-flex flex-column"> 
-                    <canvas class="h-100 border border-dark border-1 rounded"></canvas>
+                    <canvas id="canvas" class="h-100 position-relative border border-dark border-1 rounded"></canvas>
+                    <!-- <canvas id="canvas" width="100" height="100" style="border: 1px solid black;"></canvas> -->
                 </div>
             </div>
             
         </div>
         
     </div>
+    <script src="paint.js"></script>
 </body>
 </html>
